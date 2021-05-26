@@ -1,0 +1,50 @@
+<%- include('./partials/header'); %>
+<main>
+    <div class="container">
+        <h1>Perfil do pet</h1>
+        <form action="">
+            <fieldset>
+                <legend>Cadastro</legend>
+                <label for="nome">Nome</label>
+                <input type="text" name="nome" id="nome" required>
+
+                <label for="raca">Raça</label>
+                <input type="text" name="raca" id="raca">
+
+                <label>Sexo</label>
+                <div class="input-radio">
+                    <input type="radio" name="sexo" id="sexo_femea" value="Fêmea">
+                    <label for="sexo_femea">Fêmea</label>
+
+                    <input type="radio" name="sexo" id="sexo_macho" value="Macho">
+                    <label for="sexo_macho">Macho</label>
+                </div>
+                <label for="nascimento">Nascimento</label>
+                <input type="date" name="nascimento" id="nascimento">
+
+                <label for="peso">Peso (em kg)</label>
+                <input type="text" name="peso" id="peso">
+
+                <label for="castrado">Castrado</label>
+                <div class="input-radio">
+                    <input type="radio" name="castrado" id="castrado_sim" value="Sim">
+                    <label for="castrado_sim">Sim</label>
+
+                    <input type="radio" name="castrado" id="castrado_nao" value="Não">
+                    <label for="castrado_nao">Não</label>
+                </div>
+
+                <label for="temperamento">Temperamento</label>
+                <select name="temperamento" id="temperamento">
+                    <option value="manso">Manso</option>
+                    <option value="bravo">Bravo</option>
+                </select>
+            </fieldset>
+            <label for="foto">Foto</label>
+            <input type="file" name="foto" id="foto">
+
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+</main>
+<%- include('./partials/footer'); %>

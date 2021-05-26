@@ -47,6 +47,38 @@ a.btn.btn-primary {
     color: #fff;
 }
 
+.btn.btn-gray,
+a.btn.btn-gray {
+    background-color: #959593;
+    border-color: #959593;
+    padding: 5px 15px;
+    color: #fff;
+    font-weight: 500;
+
+}
+
+.btn.btn-red,
+a.btn.btn-red {
+    font-weight: 500;
+    background-color: #ff5751;
+    border-color: #ff5751;
+    padding: 5px 15px;
+    color: #fff;
+}
+
+.btn.btn-green,
+a.btn.btn-green {
+    font-weight: 500;
+    background-color: #4c9762;
+    border-color: #4c9762;
+    padding: 3px 15px;
+    color: #fff;
+}
+
+.text-center {
+    text-align: center;
+}
+
 .align-row {
     display: flex;
     justify-content: space-between;
@@ -223,30 +255,30 @@ section.contato h1 {
     margin-bottom: 70px;
 }
 
-.contato form input:not([type="radio"]):not([type="checkbox"]),
-.contato form textarea,
-.contato form select {
+form input:not([type="radio"]):not([type="checkbox"]),
+form textarea,
+form select {
     width: 100%;
     padding: 5px;
 }
 
-.contato form input:not([type="radio"]):not([type="checkbox"]):focus,
-.contato form textarea:focus,
-.contato form select:focus {
+form input:not([type="radio"]):not([type="checkbox"]):focus,
+form textarea:focus,
+form select:focus {
     outline-color: #00796B;
 }
 
-.contato form fieldset {
+form fieldset {
     margin: 15px 0;
     border-color: #fff;
 }
 
-.contato form textarea {
+form textarea {
     resize: none;
     height: 300px;
 }
 
-.contato form label {
+form label {
     margin: 10px 0 5px;
     display: inline-block;
 }
@@ -264,4 +296,34 @@ section.contato h1 {
 section.contato a:any-link,
 section.contato p {
     color: #575757;
+}
+
+main.admin .container {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+main.admin h1 {
+    font-weight: 700;
+}
+
+main.admin h2 {
+    display: inline-block;
+    margin-right: 30px;
+}
+
+main.admin section {
+    width: 100%;
+    padding: 50px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+table {
+    width: 100%;
+}
+
+table th,
+table td {
+    border: 1px solid #ccc;
+    padding: 10px;
 }
