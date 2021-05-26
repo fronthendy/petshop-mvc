@@ -2,14 +2,13 @@ const fs = require('fs');
 const path = require('path');
 const {uuid} = require('uuidv4');
 
-const servicosJson = path.join("servicos.json");
+const servicosPath = path.join("servicos.json");
+
+let servicos = fs.readFileSync(servicosPath, {encoding:'utf-8'});
+servicos = JSON.parse(servicos)
 
 const servicosController = {
     index: (request, response) => {
-        let servicos = fs.readFileSync(servicosJson, {encoding:'utf-8'})
-        servicos = JSON.parse(servicos);
-        console.log(servicos)
-
         return response.render('adminServicos', {titulo: 'Serviços', servicos});
     },
     cadastro: (request, response) => {
@@ -18,10 +17,9 @@ const servicosController = {
     salvar: (request, response) => {
         const {nome, descricao, preco, ilustracao} = request.body;
 
-        console.log({id: uuid(), nome, descricao, preco, ilustracao});
-        let dadosJson = JSON.stringify([{id: uuid(),nome, descricao, preco, ilustracao}]);
-
-        fs.writeFileSync(servicosJson, dadosJson);
+        servicos.push([{id: uuid(),nome, descricao, preco, ilustracao}]); //adiciona no array
+        let dadosJson = JSON.stringify(servicos); // converte para json
+        fs.writeFileSync(servicosPath, dadosJson); // guarda no arquivo
 
         response.redirect('/admin/servicos');
     }
