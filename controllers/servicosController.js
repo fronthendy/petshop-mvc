@@ -15,7 +15,7 @@ servicos = JSON.parse(servicos);
 const servicosController = {
     index: (request, response) => {
         /* renderiza a view adminServicos e passa informações dinamicas */
-        return response.render('adminServicos', { titulo: 'Serviços', servicos: [] });
+        return response.render('adminServicos', { titulo: 'Serviços', servicos });
     },
     cadastro: (request, response) => {
         /* renderiza formulario de cadastro */
