@@ -14,6 +14,9 @@ router.get('/servicos', servicosController.index);
 /* http://localhost:3000/admin/servicos/cadastro */
 router.get('/servicos/cadastro', servicosController.cadastro);
 
+/* http://localhost:3000/admin/servicos/cadastro */
+router.post('/servicos/cadastro', servicosController.salvar);
+
 
 /* exporta as rotas */
 module.exports = router;
