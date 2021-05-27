@@ -11,4 +11,9 @@ router.get('/', (request, response) => {
 /* http://localhost:3000/admin/servicos */
 router.get('/servicos', servicosController.index);
 
+/* http://localhost:3000/admin/servicos/cadastro */
+router.get('/servicos/cadastro', servicosController.cadastro);
+
+
+/* exporta as rotas */
 module.exports = router;
