@@ -1,1 +1,42 @@
-[{"id":"b6b3d70f-22c5-438e-8229-5a14b9490395","nome":"banho e tosa","descricao":"banoh e tosa","preco":"80","ilustracao":""},{"id":"0cb4f7c3-c888-44d7-9458-5e5554c61979","nome":"tosa","descricao":"rosa","preco":"234","ilustracao":""},{"id":"df086df7-f2a5-45dc-a4a9-3e9df30e8266","nome":"outro serviço","descricao":"outro","preco":"12","ilustracao":""},{"id":"1a5156eb-f937-4caa-9d2f-eb860e28fc3c","nome":"eita","descricao":"erw","preco":"3","ilustracao":""}]
+[
+    {
+        "id": "b6b3d70f-22c5-438e-8229-5a14b9490395",
+        "nome": "banho e tosa",
+        "descricao": "banoh e tosa",
+        "preco": "80",
+        "ilustracao": ""
+    },
+    {
+        "id": "0cb4f7c3-c888-44d7-9458-5e5554c61979",
+        "nome": "tosa",
+        "descricao": "rosa",
+        "preco": "234",
+        "ilustracao": ""
+    },
+    {
+        "id": "df086df7-f2a5-45dc-a4a9-3e9df30e8266",
+        "nome": "outro serviço",
+        "descricao": "outro",
+        "preco": "12",
+        "ilustracao": ""
+    },
+    {
+        "id": "1a5156eb-f937-4caa-9d2f-eb860e28fc3c",
+        "nome": "eita",
+        "descricao": "erw",
+        "preco": "3",
+        "ilustracao": ""
+    },
+    {
+        "id": "402aeeac-452b-4335-90aa-5cfcbf1baa43",
+        "nome": "Banho e tosa",
+        "descricao": "sdfsdf",
+        "preco": "4"
+    },
+    {
+        "id": "b6a47506-3f4b-4d9d-863e-04ceeb63bf46",
+        "nome": "Banho e tosa",
+        "descricao": "teste",
+        "preco": "563534"
+    }
+]

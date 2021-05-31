@@ -14,13 +14,13 @@ const servicosController = {
         return response.render('servicosCadastro', {titulo: 'Serviços'});
     },
     salvar: (request, response) => {
-        const {nome, descricao, preco, ilustracao} = request.body;
-
+        const {nome, descricao, preco} = request.body;
+        const ilustracao = request.files[0].originalname;
         servicos.push({id: uuid(),nome, descricao, preco, ilustracao}); //adiciona no array
         let dadosJson = JSON.stringify(servicos); // converte para json
         fs.writeFileSync(servicosPath, dadosJson); // guarda no arquivo
 
-        response.redirect('/admin/servicos');
+        return response.redirect('/admin/servicos');
     }
 }
 
