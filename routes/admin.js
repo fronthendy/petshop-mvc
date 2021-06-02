@@ -40,8 +40,13 @@ router.post('/servicos/cadastro', upload.single('ilustracao'), servicosControlle
 router.get('/servicos/editar/:id', servicosController.editar);
 
 /* http://localhost:3000/admin/servicos/editar/:id */
-router.put('/servicos/:id/editar/', upload.single('ilustracao'), servicosController.atualizar);
+router.put('/servicos/editar/:id', upload.single('ilustracao'), servicosController.atualizar);
 
+/* http://localhost:3000/admin/servicos/editar/:id */
+router.get('/servicos/excluir/:id', servicosController.excluir);
+
+/* http://localhost:3000/admin/servicos/editar/:id */
+router.delete('/servicos/excluir/:id', servicosController.remover);
 
 /* exporta as rotas */
 module.exports = router;

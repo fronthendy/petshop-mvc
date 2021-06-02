@@ -64,12 +64,26 @@ const servicosController = {
         /* redireciona para lista de serviços */
         return response.redirect('/admin/servicos');
     },
-    show: (request, response) => {
-        // console.log(request.params);
-        // pegando parametro nome da rota /servicos/:nome
-        const {nome} = request.params;
+    excluir: (request, response) => {
+        let {id} = request.params;
 
-        return response.send(`exibindo detalhes do serviço ${nome}`);
+        let servicoEncontrado = servicos.find((servico) => servico.id == id);
+
+        return response.render('servicosExcluir', { titulo: 'Excluir Serviço', servico: servicoEncontrado });
+    },
+    remover: (request, response) => {
+        let {id} = request.params;
+
+        let servicoIndex = servicos.findIndex((servico) => servico.id == id);
+
+        servicos.splice(servicoIndex, 1);
+        /** converter o array para json */
+        let dadosJson = JSON.stringify(servicos);
+        /** salva json atualizado no arquivo */
+        fs.writeFileSync(servicosPath, dadosJson);
+
+        /* redireciona para lista de serviços */
+        return response.redirect('/admin/servicos');
     }
 }
 

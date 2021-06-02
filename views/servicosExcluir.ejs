@@ -5,27 +5,27 @@
         <a href="/admin/servicos"> voltar para lista de serviços</a>
         <% if(typeof servico !== 'undefined'){ %>
 
-        <form action="/admin/servicos/editar/<%= servico.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+        <form action="/admin/servicos/excluir/<%= servico.id %>?_method=DELETE" method="POST"
+            enctype="multipart/form-data">
             <fieldset>
-                <legend>Editar Serviço</legend>
+                <legend>Excluir Serviço</legend>
                 <input type="hidden" name="id" value="<%= servico.id %>">
                 <label for="nome">Nome</label>
-                <input type="text" name="nome" id="nome" value="<%= servico.nome %>" required>
+                <input type="text" name="nome" id="nome" value="<%= servico.nome %>" readonly disabled>
 
                 <label for="descricao">Descrição</label>
-                <textarea name="descricao" id="descricao"><%= servico.descricao %></textarea>
+                <textarea name="descricao" id="descricao" readonly disabled><%= servico.descricao %></textarea>
 
                 <label for="preco">Preço</label>
-                <input type="number" name="preco" id="preco" value="<%= servico.preco %>">
+                <input type="number" name="preco" id="preco" value="<%= servico.preco %>" readonly disabled>
 
-                <label for="ilustracao">Ilustração</label>
                 <% if(servico.ilustracao) { %>
+                <label for="ilustracao">Ilustração</label>
                 <img src="/uploads/<%= servico.ilustracao %>" class="thumb-preview"
                     alt="Ilustracao de <%= servico.nome %> ">
                 <% } %>
-                <input type="file" name="ilustracao" id="ilustracao">
 
-                <button type="submit" class="btn btn-primary">Enviar</button>
+                <button type="submit" class="btn btn-red">Excluir definitivamente</button>
             </fieldset>
         </form>
         <% } %>
