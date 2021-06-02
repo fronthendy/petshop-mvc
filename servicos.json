@@ -4,6 +4,20 @@
         "nome": "Banho e tosa",
         "descricao": "banho completo, tosa basica.",
         "preco": "49",
-        "ilustracao": ""
+        "ilustracao": "/uploads/ilustracao1622505434855.webp"
+    },
+    {
+        "id": "b4b80fff-ff63-4db3-b12f-ae7b7cb1a679",
+        "nome": "twe",
+        "descricao": "twe",
+        "preco": "2",
+        "ilustracao": "/uploads/ilustracao1622505434855.webp"
+    },
+    {
+        "id": "d73eb4d3-cc61-48f2-8193-50aa68c6311d",
+        "nome": "Banho e tosa",
+        "descricao": "teste",
+        "preco": "49",
+        "ilustracao": "/uploads/ilustracao1622505434855.webp"
     }
 ]
