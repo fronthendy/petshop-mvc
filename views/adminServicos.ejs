@@ -23,14 +23,14 @@
                         <td>R$ <%= servico.preco %></td>
                         <td><%= servico.descricao %></td>
                         <td class="text-center">
-                            <a href="/admin/editarServico/<%= servico.id %>" class="btn btn-gray">editar</a>
-                            <a href="/admin/excluirServico/<%= servico.id %>" class="btn btn-red">excluir</a>
+                            <a href="/admin/servicos/editar/<%= servico.id %>" class="btn btn-gray">editar</a>
+                            <a href="/admin/servicos/excluir/<%= servico.id %>" class="btn btn-red">excluir</a>
                         </td>
                     </tr>
                     <% } %>
                 </tbody>
             </table>
-            <%}%>
+            <% } %>
         </section>
     </div>
 </main>

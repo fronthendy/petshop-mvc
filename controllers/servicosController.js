@@ -36,6 +36,34 @@ const servicosController = {
         /* redireciona para lista de serviços */
         return response.redirect('/admin/servicos');
     },
+    editar: (request, response) => {
+        let {id} = request.params;
+        console.log(request.params.id);
+        let servicoEncontrado = servicos.find((servico) => servico.id == id);
+        /* renderiza formulario de cadastro */
+        return response.render('servicosEditar', { titulo: 'Editar Serviço', servico: servicoEncontrado });
+    },
+    atualizar: (request, response) => {
+        let { id, nome, descricao, preco } = request.body;
+        
+        let servicoEncontrado = servicos.find((servico) =>  servico.id == id);
+
+        servicoEncontrado.nome = nome;
+        servicoEncontrado.descricao = descricao;
+        servicoEncontrado.preco = preco;
+
+        if(request.file) {
+            servicoEncontrado.ilustracao = request.file.filename;
+        }
+
+        /** converter o array para json */
+        let dadosJson = JSON.stringify(servicos);
+        /** salva json atualizado no arquivo */
+        fs.writeFileSync(servicosPath, dadosJson);
+
+        /* redireciona para lista de serviços */
+        return response.redirect('/admin/servicos');
+    },
     show: (request, response) => {
         // console.log(request.params);
         // pegando parametro nome da rota /servicos/:nome

@@ -36,6 +36,12 @@ router.get('/servicos/cadastro', servicosController.cadastro);
 /* http://localhost:3000/admin/servicos/cadastro */
 router.post('/servicos/cadastro', upload.single('ilustracao'), servicosController.salvar);
 
+/* http://localhost:3000/admin/servicos/editar/:id */
+router.get('/servicos/editar/:id', servicosController.editar);
+
+/* http://localhost:3000/admin/servicos/editar/:id */
+router.put('/servicos/:id/editar/', upload.single('ilustracao'), servicosController.atualizar);
+
 
 /* exporta as rotas */
 module.exports = router;
