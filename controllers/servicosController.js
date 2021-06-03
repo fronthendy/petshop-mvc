@@ -36,12 +36,39 @@ const servicosController = {
         /* redireciona para lista de serviços */
         return response.redirect('/admin/servicos');
     },
-    show: (request, response) => {
-        // console.log(request.params);
-        // pegando parametro nome da rota /servicos/:nome
-        const {nome} = request.params;
+    editar: (request, response) => {
+        /** pegando parametro id da URL */
+        let {id} = request.params;
+        /** busca serviço pelo id */
+        let servicoEncontrado = servicos.find(servico => servico.id == id);
+        /** renderiza view e manda titulo e obj do serviço */
+        return response.render('servicosEditar', { titulo: 'Editar Serviços', servico: servicoEncontrado })
 
-        return response.send(`exibindo detalhes do serviço ${nome}`);
+    },
+    atualizar: (request, response) => {
+        /** pegando parametro id da URL */
+        let { id } = request.params;
+        /** pegando informações do formulário */
+        let { nome, descricao, preco } = request.body;
+        /** busca serviço pelo id */
+        let servicoEncontrado = servicos.find(servico => servico.id == id);
+        /** atribuir os novos valores ao servicoEncontrado */
+        servicoEncontrado.nome = nome;
+        servicoEncontrado.descricao = descricao;
+        servicoEncontrado.preco = preco;
+        /** verifica se tem uma nova imagem antes de atribuir */
+        if(request.file){
+            servicoEncontrado.ilustracao = request.file.filename;
+        }
+
+        /** converter o array para json */
+        let dadosJson = JSON.stringify(servicos);
+        /** salva json atualizado no arquivo */
+        fs.writeFileSync(servicosPath, dadosJson);
+
+        /* redireciona para lista de serviços */
+        return response.redirect('/admin/servicos');
+
     }
 }
 

@@ -9,10 +9,8 @@
                 <div class="thumb" style="background-image: url('/uploads/<%= servico.ilustracao %>')"></div>
                 <div class="info">
                     <h2> <%= servico.nome %> </h2>
-                    <p>R$ 00,00</p>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis a, veritatis
-                        voluptates natus, quaerat voluptatibus tenetur in labore ad consequatur repudiandae quia
-                        veniam quas deserunt iure voluptatem. Saepe, est ipsam!</p>
+                    <p>R$ <%= servico.preco %></p>
+                    <p> <%= servico.descricao %> </p>
                     <a href="#" class="btn btn-primary">agendar</a>
                 </div>
             </article>
