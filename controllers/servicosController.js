@@ -52,6 +52,7 @@ const servicosController = {
         let { nome, descricao, preco } = request.body;
         /** busca serviço pelo id */
         let servicoEncontrado = servicos.find(servico => servico.id == id);
+        
         /** atribuir os novos valores ao servicoEncontrado */
         servicoEncontrado.nome = nome;
         servicoEncontrado.descricao = descricao;

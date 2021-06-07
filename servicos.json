@@ -1,1 +1,23 @@
-[{"id":"c98674df-ba2c-4610-878c-9e0d7fd6be7a","nome":"Banho e tosa","descricao":"banho completo, tosa basica.","preco":"49","ilustracao":"ilustracao1622505434855.webp"},{"id":"b4b80fff-ff63-4db3-b12f-ae7b7cb1a679","nome":"Tosa completa","descricao":"tosa pipipipopopo","preco":"49.00","ilustracao":"ilustracao1622679813885.jpeg"},{"id":"d73eb4d3-cc61-48f2-8193-50aa68c6311d","nome":"Banho e tosa","descricao":"teste","preco":"49","ilustracao":"ilustracao1622505434855.webp"}]
+[
+    {
+        "id": "c98674df-ba2c-4610-878c-9e0d7fd6be7a",
+        "nome": "Banho e tosa",
+        "descricao": "banho completo, tosa basica.",
+        "preco": "49",
+        "ilustracao": "ilustracao1622505434855.webp"
+    },
+    {
+        "id": "b4b80fff-ff63-4db3-b12f-ae7b7cb1a679",
+        "nome": "Tosa completa",
+        "descricao": "tosa pipipipopopo",
+        "preco": "49.00",
+        "ilustracao": "ilustracao1622679813885.jpeg"
+    },
+    {
+        "id": "d73eb4d3-cc61-48f2-8193-50aa68c6311d",
+        "nome": "Banho e tosa",
+        "descricao": "teste",
+        "preco": "49",
+        "ilustracao": "ilustracao1622505434855.webp"
+    }
+]
