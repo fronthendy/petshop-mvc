@@ -1,0 +1,5 @@
+O usuario entrou na url: /
+O usuario entrou na url: /favicon.ico
+O usuario entrou na url: /sobre
+O usuario entrou na url: /servicos
+O usuario entrou na url: /favicon.ico

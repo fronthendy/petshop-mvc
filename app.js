@@ -6,6 +6,8 @@ var logger = require('morgan');
 /** importa modulo method override */
 const methodOverride = require('method-override');
 
+var logSite = require('./middlewares/log');
+
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 let adminRouter = require('./routes/admin');
@@ -25,6 +27,8 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 /** permitindo que a pasta /uploads seja acessada a partir do front-end */
 app.use('/uploads', express.static(path.join(__dirname, '/uploads')));
+/** middlewares globais */
+app.use(logSite);
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);

@@ -26,7 +26,6 @@ router.get('/', (request, response) => {
     response.render('admin', { titulo: 'Painel Administrativo' });
 });
 
-
 /* http://localhost:3000/admin/servicos */
 router.get('/servicos', servicosController.index);
 
