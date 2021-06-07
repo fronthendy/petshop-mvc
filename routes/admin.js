@@ -3,6 +3,7 @@ const multer = require('multer'); // chama modulo multer (upload)
 const path = require('path'); // chama modulo path (caminho de arquivos)
 const router = express.Router(); // chama metodo que gerencia rotas
 const servicosController = require('../controllers/servicosController');
+const validaCadastroServico = require('../middlewares/validacao/servico');
 
 /** configurações do multer */
 const storage = multer.diskStorage({
@@ -26,7 +27,6 @@ router.get('/', (request, response) => {
     response.render('admin', { titulo: 'Painel Administrativo' });
 });
 
-
 /* http://localhost:3000/admin/servicos */
 router.get('/servicos', servicosController.index);
 
@@ -34,7 +34,7 @@ router.get('/servicos', servicosController.index);
 router.get('/servicos/cadastro', servicosController.cadastro);
 
 /* http://localhost:3000/admin/servicos/cadastro */
-router.post('/servicos/cadastro', upload.single('ilustracao'), servicosController.salvar);
+router.post('/servicos/cadastro', upload.single('ilustracao'), validaCadastroServico, servicosController.salvar);
 
 /* http://localhost:3000/admin/servicos/editar */
 router.get('/servicos/editar/:id', servicosController.editar);
