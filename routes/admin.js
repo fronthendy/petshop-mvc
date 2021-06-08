@@ -40,7 +40,7 @@ router.post('/servicos/cadastro', upload.single('ilustracao'), validaCadastroSer
 router.get('/servicos/editar/:id', servicosController.editar);
 
 /* http://localhost:3000/admin/servicos/editar/:id/?_method=PUT */
-router.put('/servicos/editar/:id', upload.single('ilustracao'), servicosController.atualizar);
+router.put('/servicos/editar/:id', upload.single('ilustracao'), validaCadastroServico, servicosController.atualizar);
 
 /* exporta as rotas */
 module.exports = router;
