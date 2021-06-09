@@ -1,0 +1,35 @@
+<%- include('./partials/header'); %>
+<main class="admin">
+    <div class="container">
+        <h1>Painel administrativo</h1>
+
+        <section>
+            <h2>Usuários</h2>
+            <a href="/admin/usuarios/cadastro" class="btn btn-green">Adicionar novo</a>
+            <% if(usuarios) { %>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Email</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% for (let usuario of usuarios) { %>
+                    <tr>
+                        <td><%= usuario.nome %></td>
+                        <td><%= usuario.email %></td>
+                        <td class="text-center">
+                            <a href="/admin/usuarios/editar/<%= usuario.id %>" class="btn btn-gray">editar</a>
+                            <a href="/admin/usuarios/excluir/<%= usuario.id %>" class="btn btn-red">excluir</a>
+                        </td>
+                    </tr>
+                    <% } %>
+                </tbody>
+            </table>
+            <%}%>
+        </section>
+    </div>
+</main>
+<%- include('./partials/footer'); %>

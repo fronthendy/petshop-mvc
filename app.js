@@ -9,7 +9,6 @@ const methodOverride = require('method-override');
 const middlewareLog = require('./middlewares/log');
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
 let adminRouter = require('./routes/admin');
 
 var app = express();
@@ -31,7 +30,6 @@ app.use('/uploads', express.static(path.join(__dirname, '/uploads')));
 app.use(middlewareLog);
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
 app.use('/admin', adminRouter);
 
 // catch 404 and forward to error handler
@@ -47,7 +45,7 @@ app.use(function(err, req, res, next) {
 
   // render the error page
   res.status(err.status || 500);
-  // res.render('error');
+  res.render('404', { titulo: 'Página não encontrada' });
 });
 
 module.exports = app;

@@ -23,6 +23,12 @@ const institucionalController = {
     },
     contato: (request, response) => {
         return response.render('contato', { titulo: 'Contato' });
+    },
+    login: (request, response) => {
+        return response.render('login', { titulo: 'Login' });
+    },
+    cadastro: (request, response) => {
+        return response.render('cadastro', { titulo: 'Cadastre-se' });
     }
 }
 

@@ -330,3 +330,46 @@ table td {
     border: 1px solid #ccc;
     padding: 10px;
 }
+
+.pagina-erro .container {
+    text-align: center;
+    min-height: 50vh;
+    display: flex;
+}
+
+/* LOGIN */
+.login {
+    padding: 70px 0;
+}
+
+.box-white {
+    width: 400px;
+    margin: 30px;
+    text-align: center;
+    padding: 40px;
+    box-shadow: 0px 1px 7px 3px rgb(124 124 124 / 21%);
+}
+
+.box-white h1 {
+    font-size: 40px;
+    color: #FFBE51;
+    font-weight: 700;
+    margin: 0 0 30px;
+}
+
+.login form input {
+    margin: 10px 0;
+}
+
+.login form button {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.login form a:any-link {
+    color: #555;
+    text-decoration: none;
+}

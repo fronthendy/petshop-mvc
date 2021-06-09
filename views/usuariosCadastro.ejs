@@ -1,0 +1,27 @@
+<%- include('./partials/header'); %>
+<main class="admin">
+    <div class="container">
+        <h1>Painel Administrativo</h1>
+        <a href="/admin/servicos"> voltar para lista de serviços</a>
+
+        <form action="/admin/servicos/cadastro" method="POST" enctype="multipart/form-data">
+            <fieldset>
+                <legend>Novo Serviço</legend>
+                <label for="nome">Nome</label>
+                <input type="text" name="nome" id="nome" required>
+
+                <label for="descricao">Descrição</label>
+                <textarea name="descricao" id="descricao"></textarea>
+
+                <label for="preco">Preço</label>
+                <input type="number" name="preco" id="preco">
+
+                <label for="ilustracao">Ilustração</label>
+                <input type="file" name="ilustracao" id="ilustracao">
+
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </fieldset>
+        </form>
+    </div>
+</main>
+<%- include('./partials/footer'); %>
