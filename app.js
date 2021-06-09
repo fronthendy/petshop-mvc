@@ -31,7 +31,7 @@ app.use('/uploads', express.static(path.join(__dirname, '/uploads')));
 app.use(middlewareLog);
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use('/', usersRouter);
 app.use('/admin', adminRouter);
 
 // catch 404 and forward to error handler
