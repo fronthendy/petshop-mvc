@@ -11,4 +11,7 @@ router.post('/cadastro', usuariosController.salvar);
 /** http://localhost:3000/login */
 router.get('/login', usuariosController.login);
 
+/** http://localhost:3000/login */
+router.post('/login', usuariosController.autenticacao);
+
 module.exports = router;
