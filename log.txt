@@ -57,3 +57,9 @@ O usuario acessou a url: /favicon.ico
 O usuario acessou a url: /login 
 O usuario acessou a url: / 
 O usuario acessou a url: /favicon.ico 
+O usuario acessou a url: /admin 
+O usuario acessou a url: /favicon.ico 
+O usuario acessou a url: /admin/servicos 
+O usuario acessou a url: /favicon.ico 
+O usuario acessou a url: /login 
+O usuario acessou a url: /favicon.ico 
